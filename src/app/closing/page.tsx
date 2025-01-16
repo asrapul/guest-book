@@ -6,7 +6,7 @@ import Link from 'next/link'
 import BgClosing from '../assets/images/BgClosing.png'
 import BgGradasi from '../assets/svgs/BgGradasi.svg'
 import ThankYou from '../assets/svgs/ThankYou.svg'
-
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 function page() {
   return (
@@ -57,7 +57,7 @@ function page() {
               style={{marginTop:"290px",position:"absolute",marginLeft:"670px"}}
             >
   
-              Terima Kasih
+             <FaArrowLeftLong className='mr-3 ml-[-13px]'/> Terima Kasih
             </button>
             </Link>
 

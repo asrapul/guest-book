@@ -74,7 +74,7 @@ function page() {
          style={{marginTop:"-275px",marginLeft:"100px"}}
         />
 
-        <Link href="/form" style={{position:"absolute"}}>
+        <Link href="/daftartamu" style={{position:"absolute"}}>
             <button
               className="
                 appearance-none rounded-[16px]
@@ -93,7 +93,7 @@ function page() {
                 src={IconCard}
                 alt="Logo Dokumen"
                 className='ml-5 mr-[-15px]'
-                
+                  
               />
             </button>
             </Link>
