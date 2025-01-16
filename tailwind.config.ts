@@ -1,3 +1,4 @@
+import { title } from "process";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -13,7 +14,11 @@ export default {
         foreground: "var(--foreground)",
         'merah-telkom':'#E4262C',
       },
-     
+      fontFamily:{
+        title:["poppins", "serif"],
+        weight: "500",
+        style: "normal"
+      }
     },
   },
   plugins: [],

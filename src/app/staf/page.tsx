@@ -11,14 +11,14 @@ import BgTransparan from '../assets/images/SmkTelkomTransparan.png';
 import CheckText from '../assets/svgs/CheckText.svg';
 
 function Page() {
-  const router = useRouter(); // Inisialisasi useRouter
+  const router = useRouter(); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleLogin = () => {
     if (username === 'admin123@admin.com' && password === 'admin123') {
-      router.push('/lobbystaf'); // Navigasi ke path /form
+      router.push('/lobbystaf'); 
     } else {
       setError('Username atau password salah');
     }
@@ -56,8 +56,8 @@ function Page() {
             <input
               type="text"
               placeholder="Username :"
-              className="w-full px-4 py-2 border border-red-400 rounded-full text-gray-700 bg-gray-100 focus:outline-none focus:ring-4 focus:ring-red-400"
-              style={{ boxShadow: '2px 2px 14px #E4262C', marginBottom: '20px' }}
+              className="w-full px-4 py-2 border border-gray-400 rounded-full text-gray-700 bg-gray-100 focus:outline-none focus:ring-4 focus:ring-red-400"
+              style={{ boxShadow: '2px 2px 14px #ADADAD', marginBottom: '20px' }}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -67,8 +67,8 @@ function Page() {
             <input
               type="password"
               placeholder="Password :"
-              className="w-full px-4 py-2 border border-red-400 rounded-full text-gray-700 bg-gray-100 focus:outline-none focus:ring-4 focus:ring-red-400"
-              style={{ boxShadow: '2px 2px 14px #E4262C', marginBottom: '30px' }}
+              className="w-full px-4 py-2 border border-gray-400 rounded-full text-gray-700 bg-gray-100 focus:outline-none focus:ring-4 focus:ring-red-400"
+              style={{ boxShadow: '2px 2px 14px #ADADAD', marginBottom: '30px' }}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />

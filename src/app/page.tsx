@@ -49,10 +49,10 @@ function Page() {
 
           <div style={{ marginTop: '20px', marginLeft: '300px' }}>
             
-            <Link href="/form">
+            <Link href="/form2">
             <button
               className="
-                appearance-none bg-transparent  rounded-full
+                appearance-none bg-transparent rounded-full
                 text-merah-telkom cursor-pointer font-sans font-semibold
                 px-9 py-3 text-center outline-none 
                 transition duration-300 ease-[cubic-bezier(.23,1,.32,1)] 
