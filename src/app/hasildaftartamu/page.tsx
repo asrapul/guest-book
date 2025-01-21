@@ -33,7 +33,7 @@ function AksesPengguna() {
           >
             <Image src="/logo.svg" alt="Logo" width={30} height={30} />
           </div>
-          <h1 style={{ fontSize: '18px', fontWeight: 'bold', margin: 0 }}>Akses Pengguna</h1>
+          <h1 style={{ fontSize: '18px', fontWeight: 'bold', margin: 0 }}>Daftar Tamu</h1>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -46,13 +46,12 @@ function AksesPengguna() {
               alignItems: 'center',
             }}
           >
-            <IoMdSearch size={20} color="#a6a6a6  " />
+            <IoMdSearch size={20} color="#C82333" />
             <input
               type="text"
               placeholder="Cari"
               style={{
                 border: 'none',
-                color:'black',
                 outline: 'none',
                 marginLeft: '5px',
                 fontSize: '14px',
@@ -67,20 +66,16 @@ function AksesPengguna() {
       {}
       <main style={{ padding: '20px 45px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px', marginTop: '20px' }}>
-          <h2 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold' }}></h2>
-          <button
-            style={{
-              backgroundColor: '#E4262C',
-              color: 'white',
-              borderWidth: '2px',
-              padding: '10px 15px',
-              borderRadius: '8px',
-              borderColor: '#63181A',
-              fontWeight: 'bold',
-            }}
-          >
-            + Tambah Pengguna
-          </button>
+            <div className='flex text-left font-semibold'>
+            <h1 className=''>Kepala Sekolah</h1>
+            <h1 className='ml-24'>SDM</h1>
+            <h1 className='ml-24'>Keuangan / Administrasi</h1>
+            <h1 className='ml-24'>Kurikulum</h1>
+            <h1 className='ml-24'>Kesiswaan</h1>
+            <h1 className='ml-24'>Sarpra</h1>
+            <h1 className='ml-24'>Hubin</h1>
+            <h1 className='ml-24 mr-4'>PPDB</h1>
+          </div>
         </div>
 
         {}
@@ -92,15 +87,17 @@ function AksesPengguna() {
             boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
           }}
         >
+          
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
               <tr style={{ backgroundColor: '#E3E2EC', textAlign: 'left' }}>
                 <th style={{ padding: '15px' }}>Nama</th>
-                <th style={{ padding: '15px' }}>NIP</th>
-                <th style={{ padding: '15px' }}>Unit Kerja</th>
-                <th style={{ padding: '15px' }}>Nama Pengguna</th>
-                <th style={{ padding: '15px' }}>Kata Sandi</th>
-                <th style={{ padding: '15px' }}>Aksi</th>
+                <th style={{ padding: '15px' }}>Hari / Tanggal</th>
+                <th style={{ padding: '15px' }}>Tujuan</th>
+                <th style={{ padding: '15px' }}>Keperluan</th>
+                <th style={{ padding: '15px' }}>Kartu<br /> Identitas </th>
+                <th style={{ padding: '15px' }}>Nomor<br /> Telpon</th>
+                <th style={{ padding: '15px' }}>Status</th>
               </tr>
             </thead>
             <tbody>
@@ -110,10 +107,11 @@ function AksesPengguna() {
                     NAMA ORANG<br />
                     <span style={{ color: '#999', fontSize: '12px' }}>Instansi</span>
                   </td>
-                  <td style={{ padding: '15px' }}>0000000000</td>
+                  <td style={{ padding: '15px' }}>00 / 00  / 2000  </td>
                   <td style={{ padding: '15px' }}>Kurikulum</td>
                   <td style={{ padding: '15px' }}>Urus nilai</td>
-                  <td style={{ padding: '15px' }}>password</td>
+                  <td style={{ padding: '15px' }}>KTP ()</td>
+                  <td style={{ padding: '15px' }}>1 Orang</td>
                   <td style={{ padding: '15px' }}>
                   </td>
                 </tr>
