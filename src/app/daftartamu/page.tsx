@@ -74,7 +74,7 @@ function page() {
               </tr>
             </thead>
             <tbody>
-              {/* Example rows for table data */}
+              {}
               <tr className="bg-white border-2">
                 <td className='text-sm font-medium' style={{ padding: "15px", textAlign: "left" }}>NAMA ORANG<br /><span className='text-gray-400 text-sm'>Instansi</span></td>
                 <td style={{ padding: "15px", textAlign: "left" }}>00 / 00 / 2000</td>
@@ -120,7 +120,7 @@ function page() {
                 <td style={{ padding: "15px", textAlign: "left" }}>1 Orang</td>
                 <td style={{ padding: "15px", textAlign: "left" }}></td>
               </tr>
-              {/* Add more rows as needed */}
+              {}
             </tbody>
           </table>
         </div>
