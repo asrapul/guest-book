@@ -2,70 +2,69 @@ import React from 'react';
 import Image from 'next/image';
 import { IoMdSearch } from 'react-icons/io';
 import Profile from '../assets/svgs/Profile.svg';
+import Navbar from '../assets/svgs/Navbarstaf.svg';
+import Icon from '../assets/images/IconSchool.png';
+import Home from '../assets/svgs/HomeStaff.svg';
+import AksesPenggun from '../assets/svgs/AksesPengguna.svg';
+import Notif from '../assets/svgs/Lonceng.svg';
+import TeksPengguna from '../assets/svgs/TeksTujuan.svg'
+import SideBar from '../assets/svgs/SideBar.svg'
 
 
 function AksesPengguna() {
   return (
-    <div style={{ backgroundColor: '#F5F5F5', height: '100vh' }}>
-      {}
-      <header
-        style={{
-          backgroundColor: '#C82333',
-          color: 'white',
-          padding: '15px 30px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div
-            style={{
-              backgroundColor: 'white',
-              borderRadius: '50%',
-              width: '40px',
-              height: '40px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginRight: '10px',
-            }}
-          >
-            <Image src="/logo.svg" alt="Logo" width={30} height={30} />
-          </div>
-          <h1 style={{ fontSize: '18px', fontWeight: 'bold', margin: 0 }}>Akses Pengguna</h1>
-        </div>
+    <div style={{ backgroundColor: '#F5F5F5', height: '' }}>
+      {}    
+      <div className='mt-12'>
+        
+        <Image
+         src={Navbar}
+         alt='Navbar'
+         width={1536}
+         style={{marginTop:"-46px"}}
+        />
+        <Image
+         src={SideBar}
+         alt='Navbar'
+         width={200}
+         style={{marginTop:"-46px"}}
+         className='absolute'
+        />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <div
-            style={{
-              backgroundColor: 'white',
-              borderRadius: '20px',
-              padding: '5px 15px',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <IoMdSearch size={20} color="#a6a6a6  " />
+        <Image
+         src={AksesPenggun}
+         alt='Navbar'
+         width={230}
+         style={{marginTop:"-80px",}}
+        />
+        
+        <div style={{ display: 'flex', alignItems: 'center', marginTop: "-40px", marginLeft: "1000px" }}>
             <input
-              type="text"
-              placeholder="Cari"
+              type='text'
+              placeholder='Cari'
               style={{
-                border: 'none',
-                color:'black',
+                marginLeft: '0px',
+                padding: '5px 25px',
+                borderRadius: '100px',
+                border: '1px solid #ccc',
                 outline: 'none',
-                marginLeft: '5px',
                 fontSize: '14px',
+                
               }}
             />
           </div>
-            <Image src={Profile} alt="foto"/>
-          <p style={{ margin: 0, fontSize: '14px' }}>admin lobby</p>
-        </div>
-      </header>
 
+        <Image
+         src={Profile}
+         alt='Navbar'
+         width={35}
+         style={{marginTop:"-38px",marginLeft:"1270px",}}
+        />
+
+        <p className='text-right text-lg ' style={{color:"white",marginRight:"125px",marginTop:"-31px"}}>admin loby</p>
+    </div>
       {}
-      <main style={{ padding: '20px 45px' }}>
+      <main style={{ padding: ' 45px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px', marginTop: '20px' }}>
           <h2 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold' }}></h2>
           <button
@@ -90,31 +89,34 @@ function AksesPengguna() {
             borderRadius: '10px',
             overflow: 'hidden',
             boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+            width: '90%',
+            marginLeft:"100px"
           }}
         >
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          
+          <table style={{ width: '100%'}}>
             <thead>
               <tr style={{ backgroundColor: '#E3E2EC', textAlign: 'left' }}>
-                <th style={{ padding: '15px' }}>Nama</th>
-                <th style={{ padding: '15px' }}>NIP</th>
-                <th style={{ padding: '15px' }}>Unit Kerja</th>
-                <th style={{ padding: '15px' }}>Nama Pengguna</th>
-                <th style={{ padding: '15px' }}>Kata Sandi</th>
-                <th style={{ padding: '15px' }}>Aksi</th>
+                <th className='p-7 '>Nama</th>
+                <th className='p-7 '>NIP</th>
+                <th className='p-7 '>Unit Kerja</th>
+                <th className='p-7 '>Nama Pengguna</th>
+                <th className='p-7 '>Kata Sandi</th>
+                <th className='p-7'>Aksi</th>
               </tr>
             </thead>
             <tbody>
-              {Array(5).fill(0).map((_, index) => (
+              {Array(10).fill(0).map((_, index) => (
                 <tr key={index} style={{ borderBottom: '3px solid #CFCDDE' }}>
                   <td style={{ padding: '15px' }}>
                     NAMA ORANG<br />
                     <span style={{ color: '#999', fontSize: '12px' }}>Instansi</span>
                   </td>
-                  <td style={{ padding: '15px' }}>0000000000</td>
-                  <td style={{ padding: '15px' }}>Kurikulum</td>
-                  <td style={{ padding: '15px' }}>Urus nilai</td>
-                  <td style={{ padding: '15px' }}>password</td>
-                  <td style={{ padding: '15px' }}>
+                  <td className='p-7'>0000000000</td>
+                  <td className='p-7'>Kurikulum</td>
+                  <td className='p-7'>Urus nilai</td>
+                  <td className='p-7'>password</td>
+                  <td className='p-7'>
                   </td>
                 </tr>
               ))}

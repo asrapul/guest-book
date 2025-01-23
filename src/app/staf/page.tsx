@@ -19,6 +19,9 @@ function Page() {
   const handleLogin = () => {
     if (username === 'admin123@admin.com' && password === 'admin123') {
       router.push('/lobbystaf'); 
+    }
+    if (username === 'superadmin@admin.com' && password === 'superadmin') {
+      router.push('/lobbysuper'); 
     } else {
       setError('Username atau password salah');
     }
