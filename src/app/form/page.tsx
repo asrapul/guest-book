@@ -63,7 +63,7 @@ function Page() {
             />
 
             <label className="block text-sm font-medium text-black">
-              <Image src={CompanyIcon} alt="Company" />
+              Company:
             </label>
             <input
               type="text"
@@ -86,7 +86,7 @@ function Page() {
               <option value="Curriculum">Curriculum</option>
               <option value="Student Affairs">Student Affairs</option>
               <option value="Facilities (Facilities and Infrastructure)">Facilities (Facilities and Infrastructure)</option>
-              <option value="Industry Relations">Industry Relations</option>
+              <option value="Industry Relations">Industry Relations</option>              
               <option value="Admissions">Admissions</option>
               <option value="Teacher">Teacher</option>
             </select>
@@ -136,7 +136,7 @@ function Page() {
             <button
               className="
                 relative inline-block text-white font-sans font-bold text-lg border-none rounded-full
-                px-8 py-3 cursor-pointer transition-all duration-300 ease-in-out outline-none text-center
+                px-8 py-3 cursor-pointer transition-all duration-300 ease-in-out  outline-none text-center
                 bg-gradient-to-b from-[#BC2D32] to-[#BC2D32] shadow-md hover:shadow-lg hover:from-[#BC2D32] hover:to-[#BC2D32]
                 active:scale-95 active:shadow-sm
               "

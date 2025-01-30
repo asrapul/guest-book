@@ -8,6 +8,7 @@ import BgForm from '../assets/svgs/gepeng.svg';
 import DateIcon from '../assets/svgs/Tanggal.svg';
 import BackIcon from '../assets/svgs/Kembali.svg';
 import Link from 'next/link';
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import NameIcon from '../assets/svgs/Name.svg';
 import CompanyIcon from '../assets/svgs/Company.svg';
 import UnitIcon from '../assets/svgs/Unit.svg';
@@ -22,7 +23,7 @@ function Page() {
       <Image src={Stelkers} alt="Stelkers" style={{ marginLeft: "330px" }} />
       <div style={{ position: 'absolute', marginTop: "-80px" }}>
         <Link href='/'>
-          <Image src={KembaliMerah} alt="Back" style={{ position: "absolute", marginTop: "20px"}} />
+          <h1 className='flex font-medium' style={{ position: "absolute", marginTop: "20px",paddingLeft:"18px",color:"#AF1318"}} ><MdOutlineKeyboardArrowLeft className='mt-1' />  Kembali </h1>
         </Link>
 
         <Image src={BgForm} alt="Background Form" width={1600} height={800} style={{backgroundColor:"#E6E6E9"}} />
@@ -35,7 +36,7 @@ function Page() {
           >
             <div style={{marginLeft:"-200px"}}>
               <label className="block text-sm font-medium text-black mb-2">
-                <Image src={NameIcon} alt="Name" />
+                Nama
               </label>
               <input
                 type="text"
@@ -47,7 +48,7 @@ function Page() {
 
             <div >
               <label className="block text-sm font-medium text-black mb-2">
-                <Image src={DateIcon} alt="Keperluan" />
+                Keperluan
               </label>
               <input
                 type="text"
@@ -59,7 +60,7 @@ function Page() {
 
             <div style={{marginLeft:"-200px"}}>
               <label className="block text-sm font-medium text-black mb-2">
-                <Image src={CompanyIcon} alt="Company" />
+                Instansi
               </label>
               <input
                 type="text"
@@ -71,7 +72,7 @@ function Page() {
 
             <div>
               <label className="block text-sm font-medium text-black mb-2">
-                <Image src={UnitIcon} alt="Unit" />
+                Kartu Identitas
               </label>
               <select
                 name="unit"
@@ -92,7 +93,7 @@ function Page() {
 
             <div style={{marginLeft:"-200px"}}>
               <label className="block text-sm font-medium text-black mb-2">
-                <Image src={NeedsIcon} alt="Needs" />
+                Tujuan (Unit)
               </label>
               <select
                 name="unit"
@@ -113,7 +114,7 @@ function Page() {
 
             <div >
               <label className="block text-sm font-medium text-black mb-2">
-                <Image src={IdentityIcon} alt="Identity" />
+                Nomor Telpon
               </label>
               <input
                 type="text"

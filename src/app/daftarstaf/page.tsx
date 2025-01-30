@@ -11,6 +11,16 @@ import { IoMdSearch } from "react-icons/io";
 
 
 function page() {
+  const today = new Date();
+  const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+  const months = [
+    "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember",
+  ];
+
+  const dayName = days[today.getDay()];
+  const date = today.getDate();
+  const monthName = months[today.getMonth()];
+  const year = today.getFullYear();
   return (
     <>
       <body style={{ background: "linear-gradient(180deg, #EBEAF2 100%, #A2A1B4 100%)" }}>
@@ -52,14 +62,14 @@ function page() {
             className='text-right text-lg'
             style={{ color: "white", marginRight: "125px", marginTop: "-29px" }}
           >
-            
             admin loby
           </p>
         </div>
 
         <div className='mt-20'>
-          <div className='mb-10 ml-36'>
-            <Image alt='hari tanggal' src={HariTanggal} />
+          <div className='mb-10 ml-36 flex'>
+            <h1 className='font-semibold ' style={{fontSize:"17px"}}>{`${dayName}`}</h1>
+            <p className='ml-4 font-medium' style={{fontSize:"17px"}}>{`${date}, ${monthName}, ${year}`}</p>
           </div>
           <table className='ml-36' style={{ width: "80%", borderCollapse: "collapse" }}>
             <thead style={{ position: "sticky", bottom: "0", backgroundColor: "#E3E2EC" }}>
