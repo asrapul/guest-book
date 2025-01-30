@@ -21,7 +21,7 @@ function Page() {
       router.push('/lobbystaf'); 
     }
     if (username === 'superadmin@admin.com' && password === 'superadmin') {
-      router.push('/lobbysuper'); 
+      router.push('/dashboard'); 
     } else {
       setError('Username atau password salah');
     }

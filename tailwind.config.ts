@@ -1,4 +1,5 @@
 import { title } from "process";
+import { FaFontAwesome } from "react-icons/fa6";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,11 +15,6 @@ export default {
         foreground: "var(--foreground)",
         'merah-telkom':'#E4262C',
       },
-      fontFamily:{
-        title:["poppins", "serif"],
-        weight: "500",
-        style: "normal"
-      }
     },
   },
   plugins: [],
