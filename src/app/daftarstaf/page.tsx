@@ -23,7 +23,7 @@ function page() {
   const year = today.getFullYear();
   return (
     <>
-      <body style={{ background: "linear-gradient(180deg, #EBEAF2 100%, #A2A1B4 100%)" }}>
+      <body className='bg-[#faf3ff]'>
         <div>
           <Image src={Navbar} alt='Navbar' width={1536} style={{ marginTop: "" }} />
 
@@ -87,7 +87,7 @@ function page() {
               {}
               <tr className="bg-white border-2">
                 <td className='text-sm font-medium' style={{ padding: "15px", textAlign: "left" }}>NAMA ORANG<br /><span className='text-gray-400 text-sm'>Instansi</span></td>
-                <td style={{ padding: "15px", textAlign: "left" }}>00 / 00 / 2000</td>
+                <td style={{ padding: "15px", textAlign: "left" }}>00 / 00 / 2000 </td>
                 <td style={{ padding: "15px", textAlign: "left" }}>Kurikulum</td>
                 <td style={{ padding: "15px", textAlign: "left" }}>Urus nilai</td>
                 <td style={{ padding: "15px", textAlign: "left" }}>KTP ()</td>

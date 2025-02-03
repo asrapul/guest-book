@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import { IoMdSearch } from 'react-icons/io';
-import Profile from '../assets/svgs/Profile.svg';
+import LogoDaftarTamu from '../assets/svgs/logoDaftarTamu.svg'
+import LogoStatistik from '../assets/svgs/LogoStatistik.svg'
+import LogoOrang from '../assets/svgs/LogoPenggunaAktif.svg'
+import LogoKeluar from '../assets/svgs/LogoKeluar.svg'
+import DaftarTamu from '../assets/svgs/DaftarTamu.svg'
 import Navbar from '../assets/svgs/Navbarstaf.svg';
-import Icon from '../assets/images/IconSchool.png';
-import Home from '../assets/svgs/HomeStaff.svg';
-import AksesPenggun from '../assets/svgs/AksesPengguna.svg';
-import Notif from '../assets/svgs/Lonceng.svg';
-import TeksPengguna from '../assets/svgs/TeksTujuan.svg'
+import Home from '../assets/svgs/LogoHomeAbu.svg';
 import SideBar from '../assets/svgs/SideBar.svg'
+import Link from 'next/link';
 
 
 function AksesPengguna() {
@@ -23,20 +23,64 @@ function AksesPengguna() {
          width={1536}
          style={{marginTop:"-46px"}}
         />
+        <div className='absolute '>
         <Image
          src={SideBar}
          alt='Navbar'
          width={200}
          style={{marginTop:"-46px"}}
-         className='absolute'
+         
         />
 
+          <Link href='/dashboard'>
+          <Image
+          src={Home}
+          alt='IconHome'
+          className='mt-[-600px] hover:bg-black ml-[18px] '
+          />
+          </Link>
+
+          <Link href='/daftaradmin'>
+          <Image
+          src={LogoDaftarTamu}
+          alt='IconHome'
+          className='mt-[28px] ml-[17px] '
+          />
+          </Link>
+
+          <Link href='/statistik'>
+          <Image
+          src={LogoStatistik}
+          alt='IconHome'
+          className='mt-[28px]  ml-[18px] '
+          />
+          </Link>
+
+          <Image
+          src={LogoOrang}
+          alt='IconHome'
+          className='mt-[28px]  ml-[9px] '
+          />
+
+
+
+          <Link href='/staf'>
+          <Image
+          src={LogoKeluar}
+          alt='IconHome'
+          className='mt-[28px]  ml-[18px] '
+          />
+          </Link>
+
+        </div>
+        <Link href='/dashboard'>
         <Image
-         src={AksesPenggun}
+         src={DaftarTamu}
          alt='Navbar'
-         width={230}
-         style={{marginTop:"-80px",}}
+         width={200}
+         style={{marginTop:"-80px",marginLeft:"90px"}}
         />
+        </Link>
         
         <div style={{ display: 'flex', alignItems: 'center', marginTop: "-40px", marginLeft: "1000px" }}>
             <input
@@ -51,17 +95,9 @@ function AksesPengguna() {
                 fontSize: '14px',
                 
               }}
+              className='mt-[-8px] mr-6'
             />
           </div>
-
-        <Image
-         src={Profile}
-         alt='Navbar'
-         width={35}
-         style={{marginTop:"-38px",marginLeft:"1270px",}}
-        />
-
-        <p className='text-right text-lg ' style={{color:"white",marginRight:"125px",marginTop:"-31px"}}>admin loby</p>
     </div>
       {}
       <main style={{ padding: ' 45px' }}>
