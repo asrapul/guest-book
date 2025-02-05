@@ -9,6 +9,7 @@ import BgForm from '../assets/svgs/BgFormStaf.svg';
 import TelkomSchool from '../assets/svgs/TeksTelkomSchool.svg';
 import BgTransparan from '../assets/images/SmkTelkomTransparan.png';
 import CheckText from '../assets/svgs/CheckText.svg';
+import { Chart } from 'chart.js';
 
 function Page() {
   const router = useRouter(); 

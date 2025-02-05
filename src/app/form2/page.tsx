@@ -17,7 +17,7 @@ import IdentityIcon from '../assets/svgs/Identity.svg';
 import VisitorIcon from '../assets/svgs/Visitor.svg';
 import KembaliMerah from '../assets/svgs/KembaliMerah.svg'
 
-function Page() {
+function Page() { 
   return (
     <>
       <Image src={Stelkers} alt="Stelkers" style={{ marginLeft: "330px" }} />
@@ -75,19 +75,13 @@ function Page() {
                 Kartu Identitas
               </label>
               <select
-                name="unit"
-                className="w-96 p-4 border text-gray-500  border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
+                name="Kartu Identitas"
+                className="w-96 p-4 border  border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
               >
-                <option value="">KTP / NPWP / ID Pegawai / Karyawan</option>
-                <option value="Principal">Principal</option>
-                <option value="HR (Human Resources)">HR (Human Resources)</option>
-                <option value="Finance/Administration">Finance/Administration</option> 
-                <option value="Curriculum">Curriculum</option>
-                <option value="Student Affairs">Student Affairs</option>
-                <option value="Facilities (Facilities and Infrastructure)">Facilities (Facilities and Infrastructure)</option>
-                <option value="Industry Relations">Industry Relations</option>
-                <option value="Admissions">Admissions</option>
-                <option value="Teacher">Teacher</option>
+                <option className='' value="">KTP / NPWP / ID Pegawai / Karyawan</option>
+                <option value="KTP (Kartu Tanda Penduduk)">KTP (Kartu Tanda Penduduk)</option>
+                <option value="NPWP (Nomor Pokok Wajib Pajak)">NPWP (Nomor Pokok Wajib Pajak)</option>
+                <option value="ID Pegawai / Karyawan">ID Pegawai / Karyawan</option> 
               </select>
             </div>
 
@@ -97,18 +91,18 @@ function Page() {
               </label>
               <select
                 name="unit"
-                className="w-96 p-4 border text-gray-500  border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
+                className="w-96 p-4 border border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
               >
-                <option value="">Unit</option>
-                <option value="Principal">Principal</option>
-                <option value="HR (Human Resources)">HR (Human Resources)</option>
-                <option value="Finance/Administration">Finance/Administration</option> 
-                <option value="Curriculum">Curriculum</option>
-                <option value="Student Affairs">Student Affairs</option>
-                <option value="Facilities (Facilities and Infrastructure)">Facilities (Facilities and Infrastructure)</option>
-                <option value="Industry Relations">Industry Relations</option>
-                <option value="Admissions">Admissions</option>
-                <option value="Teacher">Teacher</option>
+                <option className='' value="">Unit</option>
+                <option value="Kepala Sekolah">Kepala Sekolah</option>
+                <option value="SDM (Sumber Daya Manusia)">SDM (Sumber Daya Manusia)</option>
+                <option value="Keuangan / Administrasi">Keuangan / Administrasi</option> 
+                <option value="Kurikulum">Kurikulum</option>
+                <option value="Kesiswaan">Kesiswaan</option>
+                <option value="Sarpra (Sarana dan Prasarana)">Sarpra (Sarana dan Prasarana)</option>
+                <option value="Hubin (Hubungan Industri)">Hubin (Hubungan Industri)</option>
+                <option value="PPDB (Penerimaan Peserta Didik Baru)">PPDB (Penerimaan Peserta Didik Baru)</option>
+                <option value="Guru">Guru</option>
               </select>
             </div>
 
@@ -125,13 +119,13 @@ function Page() {
             </div>
           </form>
 
-          <Link href="/closing" style={{ marginTop: "-250px", position: "absolute", alignItems: "center" }}>
+          <Link href="/closing" style={{ marginTop: "-250px", position: "absolute", alignItems: "center", marginRight:"27px" }}>
             <button
               className="
                 relative inline-block text-white font-sans font-bold text-lg border-none rounded-full
-                px-8 py-3 cursor-pointer transition-all duration-300 ease-in-out outline-none text-center
+                px-10 py-2 cursor-pointer transition-all duration-300 hover:py-3 hover:px-12  hover:ease-in-out outline-none text-center
                 bg-gradient-to-b from-[#BC2D32] to-[#BC2D32] shadow-md hover:shadow-lg hover:from-[#BC2D32] hover:to-[#BC2D32]
-                active:scale-95 active:shadow-sm
+                active:scale-95 active:shadow-sm 
               "
             >
               Submit
