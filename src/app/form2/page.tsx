@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Stelkers from '../assets/svgs/StelkerAtas.svg';
 import LogoTS from '../assets/images/LogoTS.png';
@@ -15,25 +17,47 @@ import UnitIcon from '../assets/svgs/Unit.svg';
 import NeedsIcon from '../assets/svgs/Needs.svg';
 import IdentityIcon from '../assets/svgs/Identity.svg';
 import VisitorIcon from '../assets/svgs/Visitor.svg';
-import KembaliMerah from '../assets/svgs/KembaliMerah.svg'
+import KembaliMerah from '../assets/svgs/KembaliMerah.svg';
 
 function Page() { 
+  const [formData, setFormData] = useState({
+    name: '',
+    keperluan: '',
+    company: '',
+    identity: '',
+    unit: '',
+    needs: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const isFormValid = Object.values(formData).every((value) => value !== '');
+
   return (
     <>
       <Image src={Stelkers} alt="Stelkers" style={{ marginLeft: "330px" }} />
       <div style={{ position: 'absolute', marginTop: "-80px" }}>
+        <div className='flex absolute'>
         <Link href='/'>
-          <h1 className='flex font-medium' style={{ position: "absolute", marginTop: "20px",paddingLeft:"18px",color:"#AF1318"}} ><MdOutlineKeyboardArrowLeft className='mt-1' />  Kembali </h1>
+          <h1 className='flex font-medium' style={{  marginTop: "20px",paddingLeft:"18px",color:"#AF1318"}} ><MdOutlineKeyboardArrowLeft className='mt-1' />  Kembali </h1>
         </Link>
+        <p className='text-orange-700 text-xs font-semibold mt-5 ml-[240px]'>Note: <span className='text-[#09122C]'>Semua pertanyaan wajib diisi agar dapat dikumpul</span></p>
+        </div>
 
         <Image src={BgForm} alt="Background Form" width={1600} height={800} style={{backgroundColor:"#E6E6E9"}} />
-
         <div className="flex justify-center items-center mt-[70px]">
           <form 
             action="" 
             style={{ marginTop: "-780px" }} 
             className="grid grid-cols-2 gap-4  rounded-lg max-w-md w-full poppins-medium"
           >
+
             <div style={{marginLeft:"-200px"}}>
               <label className="block text-sm font-medium text-black mb-2">
                 Nama
@@ -43,6 +67,8 @@ function Page() {
                 name="name"
                 className="w-96 p-4 border border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
                 placeholder="Nama lengkap (KAPITAL)" 
+                value={formData.name}
+                onChange={handleChange}
               />
             </div>
 
@@ -55,6 +81,8 @@ function Page() {
                 name="keperluan"
                 placeholder='Keperluan'
                 className="w-96 p-4 border border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
+                value={formData.keperluan}
+                onChange={handleChange}
               />
             </div>
 
@@ -67,6 +95,8 @@ function Page() {
                 name="company"
                 className="w-96 p-4 border border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
                 placeholder="Instansi / Jabatan"
+                value={formData.company}
+                onChange={handleChange}
               />
             </div>
 
@@ -75,8 +105,10 @@ function Page() {
                 Kartu Identitas
               </label>
               <select
-                name="Kartu Identitas"
+                name="identity"
                 className="w-96 p-4 border  border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
+                value={formData.identity}
+                onChange={handleChange}
               >
                 <option className='' value="">KTP / NPWP / ID Pegawai / Karyawan</option>
                 <option value="KTP (Kartu Tanda Penduduk)">KTP (Kartu Tanda Penduduk)</option>
@@ -92,6 +124,8 @@ function Page() {
               <select
                 name="unit"
                 className="w-96 p-4 border border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
+                value={formData.unit}
+                onChange={handleChange}
               >
                 <option className='' value="">Unit</option>
                 <option value="Kepala Sekolah">Kepala Sekolah</option>
@@ -115,18 +149,16 @@ function Page() {
                 name="needs"
                 className="w-96 p-4 border  border-black rounded-[17px] bg-[#ECECF2] focus:outline-none focus:ring-2 focus:ring-[#d62b4e] shadow-2xl placeholder-gray-500"
                 placeholder="08.."
+                value={formData.needs}
+                onChange={handleChange}
               />
             </div>
           </form>
 
           <Link href="/closing" style={{ marginTop: "-250px", position: "absolute", alignItems: "center", marginRight:"27px" }}>
             <button
-              className="
-                relative inline-block text-white font-sans font-bold text-lg border-none rounded-full
-                px-10 py-2 cursor-pointer transition-all duration-300 hover:py-3 hover:px-12  hover:ease-in-out outline-none text-center
-                bg-gradient-to-b from-[#BC2D32] to-[#BC2D32] shadow-md hover:shadow-lg hover:from-[#BC2D32] hover:to-[#BC2D32]
-                active:scale-95 active:shadow-sm 
-              "
+              className={`relative inline-block mb-3 text-white font-sans font-bold text-lg border-none rounded-full px-10 py-2 cursor-pointer transition-all duration-300 hover:py-3 hover:px-12  hover:ease-in-out outline-none text-center bg-gradient-to-b from-[#BC2D32] to-[#BC2D32] shadow-md hover:shadow-lg hover:from-[#BC2D32] ml-[2px] hover:to-[#BC2D32] active:scale-95 active:shadow-sm ${isFormValid ? '' : 'opacity-50 cursor-not-allowed'}`}
+              disabled={!isFormValid}
             >
               Submit
             </button>

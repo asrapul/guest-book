@@ -31,12 +31,14 @@ function page() {
          style={{marginTop:"-100px",}}
         />
 
+        <Link href='/staf'>
         <Image
          src={Home}
          alt='Navbar'
          width={40}
-         style={{marginTop:"-38px",marginLeft:"240px"}}
+         style={{marginTop:"-38px",marginLeft:"240px",position:"absolute"}}
         />
+        </Link>
 
         <Image
          src={Profile}
@@ -44,7 +46,7 @@ function page() {
          width={35}
          style={{marginTop:"-38px",marginLeft:"1270px",}}
         />
-
+        
         <Image
          src={Notif}
          alt='Navbar'

@@ -88,6 +88,7 @@ function page() {
             <Link href='/dashboard'>
             <p className='flex text-[25px] mt-10 ml-16 '><MdOutlineKeyboardArrowLeft/><span className='text-lg mt-[-2px] font-semibold'>Akses Pengguna</span></p>
             </Link>
+            <div className='flex ml-[-25px]'>
             <input
               type='text'
               placeholder=' Cari'
@@ -102,6 +103,7 @@ function page() {
               className="mt-8 mb-8 "
             />
             <p className='text-[25px] flex mt-[35px] ml-5 '><FaRegUserCircle /><span className='text-base ml-2 font-semibold'>admin lobi</span></p>
+            </div>
           </div>
           <div>
             <button className='text-white border-[3px] rounded-lg p-3 border-[#ab1c21] bg-[#e4262c] ml-[1180px] flex'><FaPlus className='mr-3 mt-[4px]' /> Tambah Pengguna</button>

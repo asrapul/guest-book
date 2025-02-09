@@ -98,13 +98,12 @@ function page() {
               }}
               className="mt-8 mb-8 "
             /> */}
-            <p className='text-[25px] flex mt-[35px] ml-[1000px] '><FaRegUserCircle /><span className='text-base ml-2 font-semibold'>admin lobi</span></p>
+            <p className='text-[25px] flex mt-[35px] ml-[990px] '><FaRegUserCircle /><span className='text-base ml-2 font-semibold'>admin lobi</span></p>
           </div>
-          <div >
           <button className='bg-[#E4262C] text-white px-[78px] border-[3px] border-red-700 py-[10px] rounded-full absolute font-medium text-[15px] hover:bg-red-800 ml-[315px]'>Perminggu</button>
         <button className='bg-[#E4262C] text-white px-[84px] border-[3px] border-red-700 py-[10px] rounded-full absolute font-medium text-[15px]  hover:bg-red-800 ml-[620px]'>Perbulan</button>
         <button className='bg-[#E4262C] text-white px-[84px] border-[3px] border-red-700 py-[10px] rounded-full absolute font-medium text-[15px]  hover:bg-red-800 ml-[926px]'>Pertahun</button>
-          </div>
+          
             <PieChartComponent/>
         <button className='bg-[#E4262C] text-white px-10 py-2 rounded-full  font-medium text-[13px] mt-7  hover:bg-red-800 ml-[435px]'>Unduh laporan</button>
         </div>

@@ -6,8 +6,11 @@ import Icon from '../assets/images/IconSchool.png';
 import Home from '../assets/svgs/HomeStaff.svg';
 import Notif from '../assets/svgs/Lonceng.svg';
 import Profile from '../assets/svgs/Profile.svg';
+import LogoDaftarTamu from '../assets/svgs/IconDaftarAktif.svg'
+import { MdKeyboardArrowLeft } from "react-icons/md";
 import DaftarTamu from '../assets/svgs/DaftarTamu.svg';
 import { IoMdSearch } from "react-icons/io";
+import Link from 'next/link';
 
 
 function page() {
@@ -27,18 +30,27 @@ function page() {
         <div>
           <Image src={Navbar} alt='Navbar' width={1536} style={{ marginTop: "" }} />
 
-          <Image
+          <Link href='/lobbystaf'>
+          {/* <Image
             src={DaftarTamu}
             alt='Navbar'
             width={230}
             style={{ marginTop: "-82px", marginLeft: "55px" }}
-          />
+          /> */}
+          <p className='mt-[-70px] ml-[55px] text-[20px] text-white font-medium flex '><MdKeyboardArrowLeft className='text-[30px] text-white' />Daftar Tamu
+            <Image
+            src={LogoDaftarTamu}
+            alt='DaftarTamu'
+            className='ml-2'
+            />
+          </p>
+          </Link>
 
           <Image
             src={Profile}
             alt='Navbar'
             width={35}
-            style={{ marginTop: "-55px", marginLeft: "1270px" }}
+            style={{ marginTop: "-36px", marginLeft: "1270px" }}
           />
 
           <div style={{ display: 'flex', alignItems: 'center', marginTop: "-31px", marginLeft: "700px" }}>
@@ -60,7 +72,7 @@ function page() {
 
           <p
             className='text-right text-lg'
-            style={{ color: "white", marginRight: "125px", marginTop: "-29px" }}
+            style={{ color: "white", marginRight: "120px", marginTop: "-32px" }}
           >
             admin loby
           </p>

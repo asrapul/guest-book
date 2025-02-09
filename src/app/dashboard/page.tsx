@@ -34,7 +34,7 @@ function page() {
     <div>
 
           <div className='flex'>
-            <p className='text-xl font-semibold mt-32 ml-14 mr-[500px]'>Beranda</p>
+            <p className='text-xl font-semibold mt-32 ml-14 mr-[600px]'>Beranda</p>
 
             <input
               type='text'
@@ -52,9 +52,9 @@ function page() {
             <Image
             src={Profile}
             alt=''
-            className='mt-32 ml-5'
+            className='mt-[116px] ml-4'
             />
-            <p className='mt-[132px] ml-2'>admin lobby</p>
+            <p className='mt-[126px] font-semibold ml-2'>admin lobi</p>
           </div>
           <div className='p-8 ml-14 mt-5 mr-[-55px] bg-[#E4262C] rounded-lg'>
               <p className='text-2xl ml-7  text-white font-semibold'>Selamat datang di sistem manajemen buku tamu</p>
