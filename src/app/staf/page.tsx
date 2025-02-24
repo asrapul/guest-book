@@ -1,49 +1,36 @@
-"use client"; // Tambahkan ini di bagian atas file jika Anda menggunakan App Router di Next.js 13+
-
+"use client";
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'; // Import dari next/navigation
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { useAuth } from '../context/AuthContext'
 import OvalAtas from '../assets/svgs/OvalAtas.svg';
 import OvalBawah from '../assets/svgs/OvalBawah.svg';
 import BgForm from '../assets/svgs/BgFormStaf.svg';
 import TelkomSchool from '../assets/svgs/TeksTelkomSchool.svg';
 import BgTransparan from '../assets/images/SmkTelkomTransparan.png';
 import './style.css'
-import { Chart } from 'chart.js';
 
 function Page() {
-  const router = useRouter(); 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [rememberMe, setRememberMe] = useState(false); // State untuk mengingat nama pengguna
-
-  // Cek apakah ada username yang disimpan di localStorage
-  useEffect(() => {
-    const savedUsername = localStorage.getItem('username');
-    if (savedUsername) {
-      setUsername(savedUsername);
-      setRememberMe(true); // Jika ada, centang checkbox
-    }
-  }, []);
-
-  const handleLogin = () => {
-    if (username === 'admin123@admin.com' && password === 'admin123') {
-      router.push('/lobbystaf'); 
-    }
-    if (username === 'superadmin@admin.com' && password === 'superadmin') {
-      router.push('/dashboard'); 
-    } else {
-      setError('Username atau password salah');
-    }
-
-    if (rememberMe) {
-      localStorage.setItem('username', username);
-    } else {
-      localStorage.removeItem('username');
-    }
-  };
-
+            const {login}=useAuth()
+                const[form,setForm]=React.useState({
+                    email:'',
+                    password:''
+                })
+                const[error,setError]=React.useState('')
+                const handleChenge=(e)=>{
+                    setForm({
+                        ...form,
+                        [e.target.name]:e.target.value
+                    })
+                }
+                const handleSubmit=async(e)=>{
+                    e.preventDefault()
+                    try{
+                        await login(form)
+                    }catch(error){
+                        setError(error.response.data.message)
+                    }
+                }
   return (
     <>
     <body>
@@ -73,42 +60,45 @@ function Page() {
         />
         
         <div className="w-[480px] p-6" style={{ marginLeft: '1000px' }}>
+          <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
               type="text"
+              name='username'
+              onChange={handleChenge}
               placeholder="Nama Pengguna :"
               className="w-full px-4 py-2 border border-gray-400 rounded-full text-gray-700 bg-gray-100 focus:outline-none focus:ring-4 focus:ring-red-400"
               style={{ boxShadow: '2px 2px 14px #ADADAD', marginBottom: '20px' }}
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+   
             />
           </div>
 
           <div className="mb-6">
             <input
               type="password"
+              name='password'
+              onChange={handleChenge}
               placeholder="Kata Sandi :"
               className="w-full px-4 py-2 border border-gray-400 rounded-full text-gray-700 bg-gray-100 focus:outline-none focus:ring-4 focus:ring-red-400"
               style={{ boxShadow: '2px 2px 14px #ADADAD', marginBottom: '30px' }}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+
             />
           </div>
 
-          {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+
 
           <button
-            onClick={handleLogin}
+
             className="poppins-medium w-full py-2 text-white bg-red-600 rounded-full hover:bg-red-700 focus:outline-none"
           >
             LOGIN
           </button>
+          </form>
 
           <div className='flex gap-2 ml-52 mt-5'>
             <input 
               type="checkbox" 
-              checked={rememberMe}
-              onChange={() => setRememberMe(!rememberMe)}
+
             />
             <div className='text-[#777777]'>Ingat Nama Pengguna</div>
           </div>

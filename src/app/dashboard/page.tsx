@@ -173,7 +173,7 @@ function page() {
      </div>
     </Link>
 
-    <Link href='/staf'>
+    <Link href='/login2'>
      <div className=' mt-[-360px] absolute ml-12 flex p-4 rounded-lg hover:bg-[#9C0006]'>
       <Image 
       alt=''

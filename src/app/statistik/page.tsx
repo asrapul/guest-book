@@ -85,19 +85,6 @@ function page() {
             <Link href='/dashboard'> 
             <p className='flex text-[25px] mt-10 ml-16 '><MdOutlineKeyboardArrowLeft/><span className='text-lg mt-[-2px] font-semibold'>Laporan Statistik</span></p>
             </Link>
-            {/* <input
-              type='text'
-              placeholder=' Cari'
-              style={{
-                marginLeft: '800px',
-                padding: '5px 10px',
-                borderRadius: '100px',
-                border: '1px solid #ccc',
-                outline: 'none',
-                fontSize: '14px',
-              }}
-              className="mt-8 mb-8 "
-            /> */}
             <p className='text-[25px] flex mt-[35px] ml-[990px] '><FaRegUserCircle /><span className='text-base ml-2 font-semibold'>admin lobi</span></p>
           </div>
           <button className='bg-[#E4262C] text-white px-[78px] border-[3px] border-red-700 py-[10px] rounded-full absolute font-medium text-[15px] hover:bg-red-800 ml-[315px]'>Perminggu</button>

@@ -1,8 +1,10 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Image from 'next/image';
 import HariTanggal from '../assets/svgs/haritable.svg';
 import Navbar from '../assets/svgs/Navbarstaf.svg';
 import Icon from '../assets/images/IconSchool.png';
+import { useAuth } from '../context/AuthContext'; 
 import Home from '../assets/svgs/HomeStaff.svg';
 import Notif from '../assets/svgs/Lonceng.svg';
 import Profile from '../assets/svgs/Profile.svg';
@@ -11,9 +13,30 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import DaftarTamu from '../assets/svgs/DaftarTamu.svg';
 import { IoMdSearch } from "react-icons/io";
 import Link from 'next/link';
+import axios, { Axios } from 'axios';
 
 
 function page() {
+  const[form,setForm]=React.useState({
+    nama_anggota:'',
+    instansi:'',
+    tujuan:'',
+    guru:'',
+    keperluan:'',
+    kartu_identitas:'',
+    no_hp:''
+  })
+
+  const getForm=async()=>{
+    try{
+      const response=await axios.get('/getForm')
+      setForm(response.data)
+      return response
+    }catch(err){
+      return err
+    }
+  }
+
   const today = new Date();
   const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
   const months = [
